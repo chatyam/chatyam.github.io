@@ -23,7 +23,9 @@ var Hobbies = ["HOBBIES", "ACTIVITIES"];
 
 var CommonRes = ["NO", "MAYBE"];
 
-var DeepInteraction = ["TIME", "MEET", "SEE", "LIKE", "FEEL", "PREFER"]
+var DeepInteraction = ["MEET", "SEE", "LIKE", "FEEL"]
+
+var anoth = ["PREFER", "TIME"]
         // Skip the CMD Line and learn HTML by reading my code!~~ LMAO, here have fun.
 var HTMLTags2 = [
 "<A>", //    Defines a hyperlink
@@ -64,7 +66,7 @@ var HTMLTags4 = [
 ]
 var colors = ["BLUE", "RED", "GREEN", "YELLOW", "WHITE", "BLACK", "SILVER", "GRAY" ];
 var Else = true;
-var questions = [colors, HTMLTags4, HTMLTags3, HTMLTags2, HTMLTags1, Hello, Goodbye, Greeting, Name, Actions, Questions, Obvious, Hobbies, CommonRes, DeepInteraction];
+var questions = [colors, HTMLTags4, HTMLTags3, HTMLTags2, HTMLTags1, Hello, Goodbye, Greeting, Name, Actions, Questions, Obvious, Hobbies, CommonRes, DeepInteraction, anoth];
 
 
 var reactions=[BotHello, BotGoodbye,BotGreeting];
@@ -208,9 +210,11 @@ function answer(x) {
                   }*/
 
                   else if (question.includes(DeepInteraction[i])) {
-                    Else = false; if (question.includes("WHAT") ) { setTimeout(botSays, 600, "\nJamie : I prefer weekends.") }
+                    Else = false; if (question.includes("MEET") ) { setTimeout(botSays, 600, "\nJamie : Yes, we should!") }
 
                   }
+
+
 
 
 
