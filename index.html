@@ -23,7 +23,7 @@ var Hobbies = ["HOBBIES", "ACTIVITIES"];
 
 var CommonRes = ["NO", "MAYBE"];
 
-var DeepInteraction = ["MEET", "SEE", "LIKE", "FEEL"]
+var DeepInteraction = ["TIME", "MEET", "SEE", "LIKE", "FEEL", "PREFER"]
         // Skip the CMD Line and learn HTML by reading my code!~~ LMAO, here have fun.
 var HTMLTags2 = [
 "<A>", //    Defines a hyperlink
@@ -196,11 +196,20 @@ function answer(x) {
                   }
 
                   else if (question.includes(Hobbies[i])) {
-                    Else = false; if (question.includes("HAVE") ) { setTimeout(botSays, 600, "\nJamie : I love to play chess!") }
+                    Else = false; if (question.includes("ARE") ) { setTimeout(botSays, 600, "\nJamie : I love to play chess!") }
                   }
 
+                  else if (question.includes(Hobbies[i])) {
+                    Else = false; if (question.includes("MY")  ) { setTimeout(botSays, 600, "\nJamie : WOW that's amazing!") }
+                  }
+
+                  /*else if (question.includes(DeepInteraction[i])) {
+                    Else = false; if (question.includes("SOMEDAY") ) { setTimeout(botSays, 600, "\nJamie : Yea, we should definitely meet sometime!") }
+                  }*/
+
                   else if (question.includes(DeepInteraction[i])) {
-                    Else = false; if (question.includes("DO") || question.includes("THINK") || question.includes("MAYBE")|| question.includes("WANNA") || question.includes("SOMEDAY") ) { setTimeout(botSays, 600, "\nJamie : Yea, we should definitely meet sometime!") }
+                    Else = false; if (question.includes("WHAT") ) { setTimeout(botSays, 600, "\nJamie : I prefer weekends.") }
+
                   }
 
 
@@ -215,7 +224,7 @@ function answer(x) {
                   var reactPleasant = ""
                     Else = false;
                       setTimeout(botSays, 600, "\nJamie : " + reactHello + ".")
-                } else { } }  setTimeout( function() { if (Else === true) {botSays("\n\n**Error 404: Response Not Found."); } } , 700);  setTimeout( function() {Else = true; botChat.scrollTop = botChat.scrollHeight;}, 730)
+                } else { } }  setTimeout( function() { if (Else === true) {botSays("\n\nJamie : ok."); } } , 700);  setTimeout( function() {Else = true; botChat.scrollTop = botChat.scrollHeight;}, 730)
             } function botSays(x) {
                 document.getElementsByTagName("textarea")[0].innerHTML += x;
             } function youSay(x) { botSays("\n"+ you + " \ : " + x)
